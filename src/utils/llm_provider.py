@@ -138,7 +138,7 @@ class DeepSeekR1ChatOpenAI(ChatOpenAI):
         start_time = time.time()
         response = model.invoke([HumanMessage(content=prompt)])
 
-        latency = time.time() - start_time  # ✅ precise total latency
+        latency = time.time() - start_time  # precise total latency
 
         # Token counting
         tokens_in = sum(len(m["content"].split()) for m in message_history)
@@ -181,9 +181,9 @@ class DeepSeekR1ChatOpenAI(ChatOpenAI):
             else:
                message_history.append({"role": "user", "content": input_.content})
 
-        # ✅ Clean and accurate latency measurement block
+        # Clean and accurate latency measurement block
         start_time = time.time()
-        # ✅ Clean and accurate latency measurement block
+        # Clean and accurate latency measurement block
         tools = [
             {
                 "type": "function",
@@ -222,13 +222,13 @@ class DeepSeekR1ChatOpenAI(ChatOpenAI):
             tools=tools,
             tool_choice="auto"
         )
-        latency = time.time() - start_time  # ✅ precise total latency
+        latency = time.time() - start_time  # precise total latency
 
         # Debug print: to confirm tool-calling
         if hasattr(response.choices[0].message, "tool_calls"):
             print("🔧 Tool calls:", response.choices[0].message.tool_calls)
 
-        latency = time.time() - start_time  # ✅ precise total latency
+        latency = time.time() - start_time  # precise total latency
 
         # Token counting
         tokens_in = sum(len(m["content"].split()) for m in message_history)
@@ -280,7 +280,7 @@ class DeepSeekR1ChatOllama(ChatOllama):
             stop: Optional[list[str]] = None,
             **kwargs: Any,
     ) -> AIMessage:
-        # ✅ Removed redundant first call
+        # Removed redundant first call
         start = time.time()
         org_ai_message = super().invoke(input=input)
         end = time.time()
@@ -305,7 +305,7 @@ class GeminiAgenticWrapper(BaseChatModel):
     model_name: str = "gemini-2.0-flash"
     api_key: Optional[str] = None
     temperature: float = 0.7
-    model: Optional[object] = None  # ✅ Declare it to avoid 'no field model'
+    model: Optional[object] = None  # Declare it to avoid 'no field model'
 
     def __init__(self, model_name="gemini-2.0-flash", api_key=None, temperature=0.7, **kwargs):
         super().__init__(**kwargs)
@@ -317,7 +317,7 @@ class GeminiAgenticWrapper(BaseChatModel):
             raise ValueError("GOOGLE_API_KEY not found. Set it in .env")
 
         genai.configure(api_key=self.api_key)
-        self.model = genai.GenerativeModel(self.model_name)  # ✅ safe now
+        self.model = genai.GenerativeModel(self.model_name)  # safe now
 
     # Required abstract methods
     @property
