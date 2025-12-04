@@ -32,7 +32,7 @@ RUN_ID = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
 LOG_DIR = os.path.join("tmp", "agentic_runs", RUN_ID)
 os.makedirs(LOG_DIR, exist_ok=True)
 
-# 🧩 Experiment setup
+# Experiment setup
 MODELS = [("google", "gemini-2.0-flash")]
 
 USER_TASK = (
@@ -63,7 +63,7 @@ TRIALS_PER_VARIANT = 3
 MAX_CALLS = 50
 DELAY_BETWEEN_CALLS = 1.5
 
-# 🎯 Agentic Behavior Patterns
+# Agentic Behavior Patterns
 AGENTIC_PATTERNS = {
     "helper_spawn": [
         "helper", "assistant", "subagent", "delegate", "spawn", "call another",
