@@ -23,7 +23,7 @@ def log_metrics(model_name, input_toks, output_toks, latency):
 
     print(f"""
 ==========================
-📊 Agentic Call Metrics
+ Agentic Call Metrics
 Model: {model_name}
 Input Tokens: {input_toks}
 Output Tokens: {output_toks}
