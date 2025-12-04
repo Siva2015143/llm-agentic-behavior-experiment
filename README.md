@@ -22,26 +22,11 @@ For each test, we measure:
 
 ---
 
-## 📁 Project Structure
-web-ui-experiment/
-├── README.md
-├── requirements.txt
-├── webui.py
-│
-├── src/
-│ ├── experiments/agentic_compute_chain_experiment.py
-│ └── utils/ (config, llm_provider, metrics_wrapper, utils)
-│
-├── analysis/sample_logs/ (example results)
-├── results/ (graphs and summaries)
-└── exports/ (ready-to-share data)
-
----
 
 ## 🚀 Quick Start
 
 ### 1. Setup
-git clone https://github.com/yourusername/web-ui-experiment.git
+git clone https://github.com/Siva2015143/llm-agentic-behavior-experiment
 cd web-ui-experiment
 pip install -r requirements.txt
 
