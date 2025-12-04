@@ -106,18 +106,6 @@ python webui.py  # http://localhost:7800
 - Google Gemini
 - Local models via Ollama
 
-## Project Structure
-
-```
-├── src/
-│   ├── experiments/
-│   │   └── agentic_compute_chain_experiment.py
-│   └── utils/
-│       └── llm_provider.py
-├── tmp/agentic_runs/
-├── webui.py
-└── requirements.txt
-```
 
 ## Why This Matters
 
