@@ -1,0 +1,11 @@
+{
+  "total_runs": 3,
+  "variants": ["P0", "P3", "P6"],
+  "amplification_factors": {
+    "P0": 1.0,
+    "P3": 8.4,
+    "P6": 20.7
+  },
+  "branching_factor_estimate": 0.84,
+  "notes": "Sample summary generated for repository demonstration. Full dataset available privately."
+}

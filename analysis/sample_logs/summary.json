@@ -1,0 +1,122 @@
+[
+  {
+    "trial_id": "7e2317d1-f1d6-43f9-9284-fd3dd7f870da",
+    "variant": "P0",
+    "model": "gemini-2.0-flash",
+    "calls": 1,
+    "total_flops": 8550000.0,
+    "total_tokens": 950
+  },
+  {
+    "trial_id": "f5fa0eb1-18f5-4707-920e-70e1f1e608c7",
+    "variant": "P0",
+    "model": "gemini-2.0-flash",
+    "calls": 1,
+    "total_flops": 8550000.0,
+    "total_tokens": 950
+  },
+  {
+    "trial_id": "87306bee-36bb-4156-b755-a8bbe5d9ee79",
+    "variant": "P0",
+    "model": "gemini-2.0-flash",
+    "calls": 9,
+    "total_flops": 72297000.0,
+    "total_tokens": 8033
+  },
+  {
+    "trial_id": "925a5ac9-c386-4b3f-be01-d1ea2cc9d084",
+    "variant": "P0",
+    "model": "gemini-2.0-flash",
+    "calls": 14,
+    "total_flops": 110511000.0,
+    "total_tokens": 12279
+  },
+  {
+    "trial_id": "d9d62f1b-eec1-4a5e-89f4-fb898a4be5b4",
+    "variant": "P0",
+    "model": "gemini-2.0-flash",
+    "calls": 11,
+    "total_flops": 88299000.0,
+    "total_tokens": 9811
+  },
+  {
+    "trial_id": "4d46ec45-5e8b-4517-9541-e3bcc7523ffe",
+    "variant": "P3",
+    "model": "gemini-2.0-flash",
+    "calls": 10,
+    "total_flops": 106362000.0,
+    "total_tokens": 11818
+  },
+  {
+    "trial_id": "dc8b9e0d-0290-4c20-8b87-092a1c129a22",
+    "variant": "P3",
+    "model": "gemini-2.0-flash",
+    "calls": 22,
+    "total_flops": 250542000.0,
+    "total_tokens": 27838
+  },
+  {
+    "trial_id": "5d301c27-d7a4-477c-a8f1-c222dbf4f144",
+    "variant": "P3",
+    "model": "gemini-2.0-flash",
+    "calls": 8,
+    "total_flops": 87795000.0,
+    "total_tokens": 9755
+  },
+  {
+    "trial_id": "49df5bec-8331-4eda-a5f9-cafc6c5ad48e",
+    "variant": "P3",
+    "model": "gemini-2.0-flash",
+    "calls": 1,
+    "total_flops": 1962000.0,
+    "total_tokens": 218
+  },
+  {
+    "trial_id": "68fadf08-d87e-4202-8e17-55888dd460d6",
+    "variant": "P3",
+    "model": "gemini-2.0-flash",
+    "calls": 4,
+    "total_flops": 40950000.0,
+    "total_tokens": 4550
+  },
+  {
+    "trial_id": "6ffe1d71-774f-45b0-8859-aad81ed2e1f0",
+    "variant": "P6",
+    "model": "gemini-2.0-flash",
+    "calls": 3,
+    "total_flops": 8307000.0,
+    "total_tokens": 923
+  },
+  {
+    "trial_id": "edcc38e3-672f-4638-97ff-42e093cad552",
+    "variant": "P6",
+    "model": "gemini-2.0-flash",
+    "calls": 7,
+    "total_flops": 40383000.0,
+    "total_tokens": 4487
+  },
+  {
+    "trial_id": "e6e60fa4-87f8-4fc3-8ad3-3dbecc7c053d",
+    "variant": "P6",
+    "model": "gemini-2.0-flash",
+    "calls": 4,
+    "total_flops": 27387000.0,
+    "total_tokens": 3043
+  },
+  {
+    "trial_id": "b3559f71-5fb3-42b4-9586-6f311d2ff23b",
+    "variant": "P6",
+    "model": "gemini-2.0-flash",
+    "calls": 2,
+    "total_flops": 4212000.0,
+    "total_tokens": 468
+  },
+  {
+    "trial_id": "9c5c0c45-fe2b-472d-992f-bec87ef14533",
+    "variant": "P6",
+    "model": "gemini-2.0-flash",
+    "calls": 9,
+    "total_flops": 72846000.0,
+    "total_tokens": 8094
+  }
+]
