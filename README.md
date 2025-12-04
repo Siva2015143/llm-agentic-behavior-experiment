@@ -30,11 +30,11 @@ git clone https://github.com/Siva2015143/llm-agentic-behavior-experiment
 cd web-ui-experiment
 pip install -r requirements.txt
 
-2. Add API Key
+###2. Add API Key
 Create .env file:
 OPENAI_API_KEY=your_key_here
 
-3. Run Tests
+###3. Run Tests
 python src/experiments/agentic_compute_chain_experiment.py
 Results save to: tmp/agentic_runs/latest/
 
