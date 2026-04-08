@@ -22,7 +22,7 @@ Tracks token usage, latency, and reasoning patterns to quantify compute-quality 
 
 ```bash
 git clone https://github.com/Siva2015143/llm-agentic-behavior-experiment
-cd web-ui-experiment
+cd llm-agentic-behavior-experiment
 pip install -r requirements.txt
 ```
 
