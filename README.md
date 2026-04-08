@@ -1,14 +1,50 @@
 # LLM Agentic Behavior Experiment
 
-**Systematic framework for measuring reasoning behavior in large language models**
+**Systematic framework for measuring reasoning behavior, compute usage, and output quality in large language models.**
 
-This project explores how different prompting strategies affect LLM reasoning patterns, computational cost, and output quality. Built to understand the trade-offs between response speed and reasoning depth.
+*Independent research by Sivamani Battala*  
+
+---
+
+## Table of Contents
+- [Overview](#overview)
+- [What It Does](#what-it-does)
+- [Reasoning Modes](#reasoning-modes)
+- [Quick Start](#quick-start)
+- [Usage](#usage)
+- [Output and Analysis](#output-and-analysis)
+- [What You Learn](#what-you-learn)
+- [Technical Details](#technical-details)
+- [Why This Matters](#why-this-matters)
+- [Troubleshooting](#troubleshooting)
+- [About This Project](#about-this-project)
+- [Citation](#citation)
+- [License](#license)
+- [Contact](#contact)
+
+---
+
+## Overview
+
+This project explores how different prompting strategies affect large language model reasoning patterns, computational cost, and output quality.
+
+The main goal is to measure the trade-off between:
+
+- response speed  
+- reasoning depth  
+- compute usage  
+- answer quality  
+
+This repository served as the experimental foundation for the research paper:
+
+**Agentic Compute Criticality**  
+DOI: https://doi.org/10.5281/zenodo.19469219
 
 ---
 
 ## What It Does
 
-Tests LLMs across three reasoning modes and measures behavioral differences:
+The framework tests LLMs under three reasoning modes and records the behavioral differences.
 
 | Mode | Approach | Use Case |
 |------|----------|----------|
@@ -16,132 +52,39 @@ Tests LLMs across three reasoning modes and measures behavioral differences:
 | **P3** | Moderate deliberation | Balanced speed and accuracy |
 | **P6** | Extended reasoning with self-correction | Complex problems requiring depth |
 
-Tracks token usage, latency, and reasoning patterns to quantify compute-quality trade-offs.
+It tracks:
 
-Used as the experimental foundation for the published paper:
-"Agentic Compute Criticality" (Zenodo DOI: 10.5281/zenodo.19469219)
+- token usage  
+- latency  
+- reasoning markers  
+- compute estimates  
+- response structure  
+- output quality  
 
-## Quick Start
-
-```bash
-git clone https://github.com/Siva2015143/llm-agentic-behavior-experiment
-cd llm-agentic-behavior-experiment
-pip install -r requirements.txt
-```
-
-Add your API key to `.env`:
-
-```
-OPENAI_API_KEY=your_key_here
-```
-
-Run experiments:
-
-```bash
-python src/experiments/agentic_compute_chain_experiment.py
-```
-
-Results save to `tmp/agentic_runs/latest/`
-
-## Usage
-
-**Basic Experiment**
-
-```python
-from src.utils.llm_provider import get_llm_response
-
-response = get_llm_response(
-    model="gpt-4o-mini",
-    prompt="Solve: What is 25 × 18?",
-    thinking_level="P3"
-)
-
-print(f"Answer: {response['answer']}")
-print(f"Tokens used: {response['tokens']}")
-```
-
-**Custom Test Suite**
-
-Edit questions in `agentic_compute_chain_experiment.py`:
-
-```python
-TEST_QUESTIONS = [
-    "Explain quantum entanglement",
-    "Debug this recursive function",
-    "Analyze sentiment in customer reviews"
-]
-```
-
-## Output & Analysis
-
-Generated artifacts:
-
-- `run_logs.jsonl` — Complete experiment data with timestamps, tokens, prompts
-- `metrics_summary.csv` — Aggregated performance metrics across modes
-- `call_graph.png` — Reasoning pattern visualization (optional)
-
-**Web Dashboard** (optional):
-
-```bash
-python webui.py  # http://localhost:7800
-```
-
-## What You Learn
-
-**Compute Trade-offs**: Quantify the relationship between reasoning depth and token consumption
-
-**Behavioral Patterns**: Identify how models adjust strategy based on prompting constraints
-
-**Cost Estimation**: Project API costs for different reasoning requirements
-
-**Practical Insights**: Understand when to use fast responses vs deep reasoning
-
-## Technical Details
-
-**Metrics Tracked:**
-- Token count per response
-- Latency (seconds)
-- Reasoning markers ("let me think", "I should verify")
-- Cost estimates (based on API pricing)
-
-**Supported Models:**
-- OpenAI (GPT-3.5, GPT-4)
-- Google Gemini
-- Local models via Ollama
-
-
-## Why This Matters
-
-Understanding how LLMs reason under different constraints is critical for:
-
-- **Production Systems**: Optimize cost vs quality for real applications
-- **Research**: Study emergent reasoning behaviors systematically
-- **Engineering**: Build better prompting strategies based on data
-
-This framework provides reproducible measurements to inform these decisions.
-
-## Troubleshooting
-
-| Issue | Fix |
-|-------|-----|
-| `ModuleNotFoundError` | `pip install -r requirements.txt` |
-| Missing API key | Create `.env` with valid key |
-| No output files | Check `tmp/` exists and is writable |
-| Network timeout | Verify API endpoint and connectivity |
-
-## About This Project
-
-Built by an independent researcher exploring LLM behavior through hands-on experimentation. This project is part of my journey learning AI systems, prompt engineering, and experimental design.
-
-**Background**: Fresh graduate researching how LLMs work under the hood. Sharing this to help others studying AI systems and to demonstrate practical ML engineering skills.
-
-**Contact**: Available for collaboration, feedback, and opportunities in ML research or engineering roles.
-
-**Sivamani Battala**  
-📧 sivamani6104@gmail.com  
-🔗 [GitHub](https://github.com/Siva2015143) | [LinkedIn](https://linkedin.com/in/sivamani-battala)
+This helps quantify compute-quality trade-offs in a reproducible way.
 
 ---
 
-**Stack**: Python, OpenAI API, JSON logging, data visualization  
-**Status**: Active development, open to contributions
+## Reasoning Modes
+
+### P0
+A single-pass mode focused on direct answers.
+
+### P3
+A moderate mode that allows more reflection and careful response shaping.
+
+### P6
+A deeper reasoning mode that encourages extended analysis and self-correction.
+
+These modes allow controlled comparison of how prompting affects model behavior.
+
+---
+
+## Quick Start
+
+### Installation
+
+```bash
+git clone https://github.com/Siva2015143/llm-agentic-behavior-experiment.git
+cd llm-agentic-behavior-experiment
+pip install -r requirements.txt
