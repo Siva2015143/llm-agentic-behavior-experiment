@@ -48,7 +48,7 @@ Results save to `tmp/agentic_runs/latest/`
 from src.utils.llm_provider import get_llm_response
 
 response = get_llm_response(
-    model="gpt-3.5-turbo",
+    model="gpt-4o-mini",
     prompt="Solve: What is 25 × 18?",
     thinking_level="P3"
 )
