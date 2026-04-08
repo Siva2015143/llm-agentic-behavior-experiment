@@ -18,6 +18,9 @@ Tests LLMs across three reasoning modes and measures behavioral differences:
 
 Tracks token usage, latency, and reasoning patterns to quantify compute-quality trade-offs.
 
+Used as the experimental foundation for the published paper:
+"Agentic Compute Criticality" (Zenodo DOI: 10.5281/zenodo.19469219)
+
 ## Quick Start
 
 ```bash
